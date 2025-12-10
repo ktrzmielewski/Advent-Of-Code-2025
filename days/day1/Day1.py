@@ -6,10 +6,7 @@ class Day1(BaseDay):
     counter_any_click = 0
     num_of_clicks = 0
 
-    def solve_and_get_results(self):
-        return isinstance(self.get_day_one_result_part_one(), int) and isinstance(self.get_day_one_result_part_two(), int)
-
-    def get_day_one_result_part_one(self, prints=False):
+    def get_result_part_one(self, prints=False):
         with open('days/day1/input.txt') as input_from_file:
             for input in input_from_file:
                 if input[0] == 'L':
@@ -26,7 +23,7 @@ class Day1(BaseDay):
                     print(f"Dial after: {self.dial}, counter after: {self.counter_exact}")
         return self.counter_exact
 
-    def get_day_one_result_part_two(self, prints=False):
+    def get_result_part_two(self, prints=False):
         with open('days/day1/input.txt') as input_from_file:
             for input in input_from_file:
                 move = int(input[1:])
